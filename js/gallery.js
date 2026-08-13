@@ -101,7 +101,7 @@ function createModal(url, alt) {
 function handleClick(event) {
   event.preventDefault();
 
-  if (event.target === event.currentTarget) return;
+  if (event.target.nodeName !== "IMG") return;
 
   const originalUrl = event.target.dataset.source;
   const alt = event.target.alt;
